@@ -1,10 +1,10 @@
-#' T to U
+#' Returns data with T bases transformed to U bases
 #'
 #' @param data 
 #' original data 
 #'
 #' @returns
-#' returns data with T bases transformed to U bases
+#' 
 #' @export
 #'
 #'
