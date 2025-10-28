@@ -1,27 +1,38 @@
-#' Title
+#' Generate barplot of amino acid counts
 #'
-#' @param param1
-#' @param param2
+#' This function takes a string of one letter amino acid codes,
+#'  and generates a barplot showing the counts of each amino acid.
+#'
+#'
+#' @param AA_string A string of one letter amino acid codes. Any non-amino acids will be ignored.
+#' @returns geom_col with amino acids on x-axis and counts on y.
+#'
 #' @importFrom stringr str_split boundary str_count
 #' @import ggplot2
-name_me1 <- function(name_me2){
+#'
+#' @examples
+#' AA_counts_plot("SSFPTAYYHQNNQQ")
+AA_counts_plot <- function(AA_string){
 
-  name_me3 <- name_me2 |>
+  #Separate string into character vector by character
+  amino_acids <- AA_string |>
     stringr::str_split(pattern = stringr::boundary("character"), simplify = TRUE) |>
     as.character() |>
     unique()
 
-  counts <- sapply(name_me3, function(amino_acid) stringr::str_count(string = name_me2, pattern =  amino_acid)) |>
+  #Count number of times each amino acid is found in the character vector amino_acids
+  counts <- sapply(amino_acids, function(amino_acid) stringr::str_count(string = AA_string, pattern =  amino_acid)) |>
     as.data.frame()
 
+  #Create list with amino acids and their counts
   colnames(counts) <- c("Counts")
-  counts[["Name_me2"]] <- rownames(counts)
+  counts[["AA_string"]] <- rownames(counts)
 
-  name_me4 <- counts |>
-    ggplot2::ggplot(ggplot2::aes(x = Name_me2, y = Counts, fill = Name_me2)) +
+  AA_barplot <- counts |>
+    ggplot2::ggplot(ggplot2::aes(x = AA_string, y = Counts, fill = AA_string)) +
     ggplot2::geom_col() +
     ggplot2::theme_bw() +
     ggplot2::theme(legend.position = "none")
 
-  return(name_me4)
+  return(AA_barplot)
 }
