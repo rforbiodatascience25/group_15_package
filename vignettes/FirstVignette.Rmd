@@ -19,3 +19,13 @@ Load the firstdogma library to access the five functions made in class
 ```{r setup}
 library(firstdogma)
 ```
+
+1
+
+2
+
+3
+
+4
+
+5
