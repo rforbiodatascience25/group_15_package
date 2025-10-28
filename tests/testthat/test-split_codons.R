@@ -1,3 +1,3 @@
-test_that("multiplication works", {
-  expect_equal(2 * 2, 4)
+test_that("split codons work", {
+  expect_equal(split_codons("atcgatc"),c("atc","gat"))
 })
