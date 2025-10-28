@@ -2,27 +2,30 @@ Package: firstdogma
 Type: Package
 Title: First Central Dogma project in R
 Version: 0.1.0
-Authors@R:
-  c(person(given = "Anas ",
+Authors@R: 
+  c(
+    person(given = "Anas",
            family = "El Youssef",
-           role = c("aut", "cre"), # There must be a "cre", but there can only be one
-           email = "s233381@dtu.dk"), 
+           role = c("aut", "cre"),
+           email = "s233381@dtu.dk"),
     person(given = "Humaira",
            family = "Amin",
            role = "aut",
-           email = "s235423@dtu.dk")
+           email = "s235423@dtu.dk"),
     person(given = "Giosue",
            family = "Palliotto",
            role = "aut",
-           email = "s253716@dtu.dk")
+           email = "s253716@dtu.dk"),
     person(given = "Zoja",
            family = "Palova",
            role = "aut",
-           email = "s225185@dtu.dk")
+           email = "s225185@dtu.dk"),
     person(given = "Joel",
            family = "Pålsson",
            role = "aut",
            email = "s253731@dtu.dk")
+  )
+
 Description: This is a the first package project in our R course. It will help us learn how to make R packages
 License: MIT + file LICENSE
 Encoding: UTF-8
