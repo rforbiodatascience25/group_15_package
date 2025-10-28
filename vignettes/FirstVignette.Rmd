@@ -20,9 +20,17 @@ Load the firstdogma library to access the five functions made in class
 library(firstdogma)
 ```
 
-1
+## Function 1
 
-2
+This function generates a random DNA sequence. This is how to use it
+
+```{r}
+generate_dna_sequence(50)
+```
+
+It will give randomly generated DNA sequence with a length of 50 bases.
+
+## Function 2
 
 This is how you use function T_to_U
 
@@ -32,7 +40,7 @@ T_to_U("TATATA")
 
 As you can see the function substitutes all Ts to Us.
 
-3
+## Function 3
 
 The split_codons function allows you to split a nucleotide sequence into codons
 
@@ -47,6 +55,6 @@ If you want to start somewhere else use the start argument like below
 split_codons("ATGCGTACG", start = 2)
 ```
 
-4
+## Function 4
 
-5
+## Function 5
