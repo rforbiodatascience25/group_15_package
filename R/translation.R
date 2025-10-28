@@ -1,12 +1,12 @@
 #' Translation
 #'
-#' @param codons mRNA from codon_table
+#' @param codons vector of codons to translate
 #'
 #' @returns chain of amino acids
 #' @export
 #'
 #' @examples
-mrna <- function(codons){
-  translation <- paste0(codon_table[codons], collapse = "")
+translation <- function(codons){
+              paste0(codon_table[codons], collapse = "")
   return(translation)
 }
