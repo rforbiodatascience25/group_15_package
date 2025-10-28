@@ -2,16 +2,15 @@
 % Please edit documentation in R/T_to_U.R
 \name{T_to_U}
 \alias{T_to_U}
-\title{T to U}
+\title{T_to_U function
+returns data with T bases transformed to U bases}
 \usage{
 T_to_U(data)
 }
 \arguments{
 \item{data}{original data}
 }
-\value{
-returns data with T bases transformed to U bases
-}
 \description{
-T to U
+T_to_U function
+returns data with T bases transformed to U bases
 }
