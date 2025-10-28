@@ -1,8 +1,8 @@
 ---
-title: "FirstVignette"
+title: "firstdogma"
 output: rmarkdown::pdf_document
 vignette: >
-  %\VignetteIndexEntry{FirstVignette}
+  %\VignetteIndexEntry{firstdogma}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 Load the firstdogma library to access the five functions made in class
 
 ```{r setup}
-library(firstdogma)
+library("firstdogma")
 ```
 
 1
@@ -30,7 +30,7 @@ This is how you use function T_to_U
 T_to_U("TATATA")
 ```
 
-As you can see the function substitutes all Ts to Us.
+As you can see the function substitutes all Ts to Us
 
 3
 
