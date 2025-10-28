@@ -24,6 +24,14 @@ library(firstdogma)
 
 2
 
+This is how you use function T_to_U
+
+```{r}
+T_to_U("TATATA")
+```
+
+As you can see the function substitutes all Ts to Us.
+
 3
 
 4
