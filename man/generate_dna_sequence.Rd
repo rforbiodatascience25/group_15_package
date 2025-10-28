@@ -16,5 +16,5 @@ a random sequence of DNA as a string
 Random DNA Sequence Generator
 }
 \examples{
-ACGTTTCGAGT
+"ACGTTTCGAGT"
 }

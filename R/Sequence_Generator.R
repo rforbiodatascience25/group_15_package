@@ -5,7 +5,7 @@
 #' @returns a random sequence of DNA as a string
 #' @export
 #'
-#' @examples ACGTTTCGAGT
+#' @examples "ACGTTTCGAGT"
 generate_dna_sequence <- function(length){
   nucleotides <- sample(c("A", "T", "G", "C"), size = length, replace = TRUE)
   sequence <- paste0(nucleotides, collapse = "")
