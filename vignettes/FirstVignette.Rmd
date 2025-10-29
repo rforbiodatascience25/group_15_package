@@ -58,3 +58,15 @@ split_codons("ATGCGTACG", start = 2)
 ## Function 4
 
 ## Function 5
+`AA_counts_plot` takes a sequence of amino acid one letter codes as a string and generates a bargraph of the counts for each amino acid. It also works with DNA or RNA sequences. Any characters which do not correspond to an amino acid one letter code or DNA/RNA will be ignored.
+
+To use, simply call it with a string of amino acids or DNA/RNA:
+
+```{r AA_counts_plot_example}
+#Amino acids sequence
+AA_counts_plot("SSFPTAYYHQNNQQ")
+
+#DNA
+AA_counts_plot("GGTACCTAGGATCA")
+```
+
