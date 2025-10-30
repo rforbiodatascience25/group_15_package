@@ -9,7 +9,7 @@ vignette: >
 
 Link to gitHub repository:
 
-https://github.com/rforbiodatascience25/group_15_package/tree/master
+<https://github.com/rforbiodatascience25/group_15_package/tree/master>
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
@@ -64,10 +64,11 @@ split_codons("ATGCGTACG", start = 2)
 This function translates the character vector of codons into respective amino acids based on codon_table defined previously. This is the translation phase of the central dogma.
 
 ```{r}
-translation(codon_table)
+translation(c("AUG","GGC","UUU"))
 ```
 
 ## Function 5
+
 `AA_counts_plot` takes a sequence of amino acid one letter codes as a string and generates a bargraph of the counts for each amino acid. It also works with DNA or RNA sequences. Any characters which do not correspond to an amino acid one letter code or DNA/RNA will be ignored.
 
 To use, simply call it with a string of amino acids or DNA/RNA:
@@ -79,4 +80,3 @@ AA_counts_plot("SSFPTAYYHQNNQQ")
 #DNA
 AA_counts_plot("GGTACCTAGGATCA")
 ```
-
