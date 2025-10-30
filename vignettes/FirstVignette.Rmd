@@ -57,4 +57,10 @@ split_codons("ATGCGTACG", start = 2)
 
 ## Function 4
 
+This function translates the character vector of codons into respective amino acids based on codon_table defined previously. This is the translation phase of the central dogma.
+
+```{r}
+translation(codon_table)
+```
+
 ## Function 5
