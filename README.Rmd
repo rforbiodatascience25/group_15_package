@@ -59,7 +59,7 @@ split_codons("ATGCGTACG", start = 2)
 The fourth function translates the character vector of codons into respective amino acids based on codon_table defined previously. This is the translation phase of the central dogma.
 
 ```{r}
-translation(codon_table)
+translation(c("AUG","GGC","UUU"))
 ```
 
 `AA_counts_plot` takes a sequence of amino acid one letter codes as a string and generates a bargraph of the counts for each amino acid. It also works with DNA or RNA sequences. Any characters which do not correspond to an amino acid one letter code or DNA/RNA will be ignored.

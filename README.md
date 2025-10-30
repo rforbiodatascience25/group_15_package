@@ -20,7 +20,7 @@ First function generates a random DNA sequence.
 
 ``` r
 generate_dna_sequence(50)
-#> [1] "TGGGCGCCGTCCGTACAATTAACTCGGGGTGGCTGAAACGAGCGTATAAT"
+#> [1] "ATCAAAGAGGCAGAAGTTGATAGAGCTAACCACATACGATTAATCAGGTC"
 ```
 
 It will give randomly generated DNA sequence with a length of 50 bases.
@@ -54,8 +54,8 @@ respective amino acids based on codon_table defined previously. This is
 the translation phase of the central dogma.
 
 ``` r
-translation(codon_table)
-#> [1] "NANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANA"
+translation(c("AUG","GGC","UUU"))
+#> [1] "MGF"
 ```
 
 `AA_counts_plot` takes a sequence of amino acid one letter codes as a
