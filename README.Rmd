@@ -17,41 +17,59 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-
 <!-- badges: end -->
 
-The goal of firstdogma is to ...
+Link to gitHub repository:
 
-## Installation
+<https://github.com/rforbiodatascience25/group_15_package/tree/master>
 
-You can install the development version of firstdogma like so:
+Load the firstdogma library to access the five functions made in class
 
-``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+```{r}
+library("firstdogma")
 ```
 
-## Example
+First function generates a random DNA sequence.
 
-This is a basic example which shows you how to solve a common problem:
-
-```{r example}
-#library(firstdogma)
-## basic example code
+```{r}
+generate_dna_sequence(50)
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+It will give randomly generated DNA sequence with a length of 50 bases.
 
-```{r cars}
-summary(cars)
+Second function substitutes T by U like in transcription phase, where DNA is transcribed in mRNA
+
+```{r}
+T_to_U("TATATA")
 ```
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
+Third function - the split_codons function - allows you to split a nucleotide sequence into codons
 
-You can also embed plots, for example:
+```{r split_codons function}
 
-```{r pressure, echo = FALSE}
-plot(pressure)
+split_codons("ATGCGTACG")
 ```
 
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
+If you want to start somewhere else use the start argument like below
+
+```{r}
+split_codons("ATGCGTACG", start = 2)
+```
+
+The fourth function translates the character vector of codons into respective amino acids based on codon_table defined previously. This is the translation phase of the central dogma.
+
+```{r}
+translation(codon_table)
+```
+
+`AA_counts_plot` takes a sequence of amino acid one letter codes as a string and generates a bargraph of the counts for each amino acid. It also works with DNA or RNA sequences. Any characters which do not correspond to an amino acid one letter code or DNA/RNA will be ignored.
+
+To use, simply call it with a string of amino acids or DNA/RNA:
+
+```{r AA_counts_plot_example}
+#Amino acids sequence 
+AA_counts_plot("SSFPTAYYHQNNQQ")
+
+#DNA 
+AA_counts_plot("GGTACCTAGGATCA")
+```

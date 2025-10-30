@@ -4,51 +4,78 @@
 # firstdogma
 
 <!-- badges: start -->
-
-[![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-
 <!-- badges: end -->
 
-The goal of firstdogma is to …
+Link to gitHub repository:
 
-## Installation
+<https://github.com/rforbiodatascience25/group_15_package/tree/master>
 
-You can install the development version of firstdogma like so:
-
-``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
-```
-
-## Example
-
-This is a basic example which shows you how to solve a common problem:
+Load the firstdogma library to access the five functions made in class
 
 ``` r
-#library(firstdogma)
-## basic example code
+library("firstdogma")
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+First function generates a random DNA sequence.
 
 ``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
+generate_dna_sequence(50)
+#> [1] "TGGGCGCCGTCCGTACAATTAACTCGGGGTGGCTGAAACGAGCGTATAAT"
 ```
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this.
+It will give randomly generated DNA sequence with a length of 50 bases.
 
-You can also embed plots, for example:
+Second function substitutes T by U like in transcription phase, where
+DNA is transcribed in mRNA
 
-<img src="man/figures/README-pressure-1.svg" width="100%" />
+``` r
+T_to_U("TATATA")
+#> [1] "UAUAUA"
+```
 
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+Third function - the split_codons function - allows you to split a
+nucleotide sequence into codons
+
+``` r
+
+split_codons("ATGCGTACG")
+#> [1] "ATG" "CGT" "ACG"
+```
+
+If you want to start somewhere else use the start argument like below
+
+``` r
+split_codons("ATGCGTACG", start = 2)
+#> [1] "TGC" "GTA"
+```
+
+The fourth function translates the character vector of codons into
+respective amino acids based on codon_table defined previously. This is
+the translation phase of the central dogma.
+
+``` r
+translation(codon_table)
+#> [1] "NANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANANA"
+```
+
+`AA_counts_plot` takes a sequence of amino acid one letter codes as a
+string and generates a bargraph of the counts for each amino acid. It
+also works with DNA or RNA sequences. Any characters which do not
+correspond to an amino acid one letter code or DNA/RNA will be ignored.
+
+To use, simply call it with a string of amino acids or DNA/RNA:
+
+``` r
+#Amino acids sequence 
+AA_counts_plot("SSFPTAYYHQNNQQ")
+```
+
+<img src="man/figures/README-AA_counts_plot_example-1.svg" width="100%" />
+
+``` r
+
+#DNA 
+AA_counts_plot("GGTACCTAGGATCA")
+```
+
+<img src="man/figures/README-AA_counts_plot_example-2.svg" width="100%" />
